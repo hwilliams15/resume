@@ -1,0 +1,194 @@
+body, div, ul, li, p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-family: 'Jura', sans-serif;
+}
+body {
+  background-color: #e6efef;
+}
+#main {
+  width: 960px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 40px;
+  color: #fff;
+  line-height: 48px;
+  display: inline;
+}
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #999;
+  line-height: 29px;
+  padding: 10px;
+}
+h3 {
+  color: #f9f358;
+}
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #000;
+  line-height: 22px;
+}
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 17px;
+}
+h2, h3, h4, h5 {
+  padding: 40px 5% 10px 5%;
+}
+.blue {
+  background-color: #69d2e7;
+}
+.blue-text {
+  color: #69d2e7;
+}
+.yellow-text {
+  color: #f9f358;
+}
+.orange-text {
+  color: #f8c862;
+}
+.welcome-message {
+  font-size: 18px;
+  color: #fff;
+  line-height: 28px;
+}
+#skills-h3 {
+  color: #f9f358;
+  display: none;
+}
+#skills-div {
+  margin-top: 80px;
+}
+ul {
+  list-style-type: none;
+}
+@media only screen and (min-width: 750px) {
+  #skills-h3, .biopic {
+    display: block;
+  }
+}
+.white-background {
+  margin-top: 20px;
+  background-color: #fff;
+  padding-bottom: 10px;
+  clear: both;
+}
+#map {
+  display: block;
+  height: 100%;
+  margin: 10px 5% 0 5%;
+}
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 137px;
+}
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+.biopic {
+  float: left;
+  padding: 10px;
+  max-width: 200px;
+  display: none;
+}
+#topContacts {
+  padding: 10px 0;
+}
+#lets-connect-header {
+  padding-top: 10px;
+}
+.education-entry, .work-entry, .project-entry {
+  padding: 0 5%;
+}
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+}
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+}
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+.center-content {
+  padding: 2.5% 5%;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  padding: 10px;
+}
+span {
+  padding: 5px;
+}
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+#lets-connect {
+  text-align: center;
+}
+#mapDiv h1 {
+  color: #000;
+  font-size: 2em;
+}
+hr {
+  border: 1px solid #fff;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width:900px) {
+  .biopic {
+    max-width: 175px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    max-width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+@media only screen and (min-width: 750px) {
+  #skills-h3, .biopic {
+    display: block;
+  }
+}
