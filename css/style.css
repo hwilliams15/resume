@@ -53,6 +53,9 @@ h2, h3, h4, h5 {
 .orange-text {
   color: #f8c862;
 }
+.dark-orange-text{
+  color: #e9a617;
+}
 .welcome-message {
   font-size: 18px;
   color: #fff;
@@ -76,7 +79,7 @@ ul {
 .white-background {
   margin-top: 20px;
   background-color: #fff;
-  padding-bottom: 10px;
+  padding-bottom: 5%;
   clear: both;
 }
 #map {

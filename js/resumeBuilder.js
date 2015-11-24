@@ -32,22 +32,22 @@ var education = {
     "title": "JavaScript Basics",
     "school": "Udacity",
     "date": 2015,
-    "url": "http://www.udacity.com/course/ud804"
+    "url": "https://www.udacity.com/course/javascript-basics--ud804"
   }, {
     "title": "Intro to jQuery",
     "school": "Udacity",
     "date": 2015,
-    "url": "http://www.udacity.com/course/ud804"
+    "url": "https://www.udacity.com/course/intro-to-jquery--ud245"
   }, {
     "title": "Intro to HTML and CSS",
     "school": "Udacity",
     "date": 2015,
-    "url": "http://www.udacity.com/course/ud804"
+    "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
   }, {
     "title": "Responsive Web Design Fundamentals",
     "school": "Udacity",
     "date": 2015,
-    "url": "http://www.udacity.com/course/ud804"
+    "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
   }]
 };
 
@@ -85,7 +85,15 @@ var projects = {
     "technologies": ["HTML", "CSS", "Bootstrap"],
     "dates": 2015,
     "description": "A responsive portfolio using HTML, CSS, and Bootstrap to" +
-      " showcase my projects"
+    " showcase my projects",
+    "images":["https://placehold.it/200x150","https://placehold.it/200x150"]
+  },{
+    "title": "Resume",
+    "technologies": ["HTML", "CSS", "JavaScript", "jQuery"],
+    "dates": 2015,
+    "description": "An online resume to show my skills, education, and work experience",
+    "images":["https://placehold.it/200x150","https://placehold.it/200x150"]
+
   }]
 };
 
@@ -96,8 +104,8 @@ bio.display = function() {
   var biopic = HTMLbioPic.replace("%data%", bio.biopic);
   var welcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-  var contactInfo = HTMLemail.replace("%data%", bio.contacts.email);
-  contactInfo = contactInfo + HTMLmobile.replace("%data%", bio.contacts.mobile);
+  var contactInfo = HTMLmobile.replace("%data%", bio.contacts.mobile);
+  contactInfo = contactInfo + HTMLemail.replace("%data%", bio.contacts.email);
   contactInfo = contactInfo + HTMLgithub.replace("%data%", bio.contacts.github);
   contactInfo = contactInfo + HTMLlocation.replace("%data%", bio.contacts.location);
 
@@ -110,15 +118,15 @@ bio.display = function() {
 
   if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
-    var i = 0;
-    for (i = 0; i < bio.skills.length; i++) {
+    var i;
+    for (i = 0; i < bio.skills.length; i+=1) {
       $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
     }
   }
-}
+};
 
 work.display = function() {
-  for (job in work.jobs) {
+  for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var elem = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     elem = elem + HTMLworkTitle.replace("%data%", work.jobs[job].title);
@@ -127,7 +135,7 @@ work.display = function() {
     elem = elem + HTMLworkDescription.replace("%data%", work.jobs[job].description);
     $(".work-entry:last").append(elem);
   }
-}
+};
 
 
 
@@ -139,8 +147,8 @@ projects.display = function() {
     var elem = HTMLprojectTitle.replace("%data%", projects.projects[index].title);
     elem = elem + HTMLprojectDates.replace("%data%", projects.projects[index].dates);
     elem = elem + HTMLprojectDescription.replace("%data%", projects.projects[index].description);
-    for (var image in projects.projects.images) {
-      elem = elem + HTMLprojectImage.replace("%data%", projects.projects[image].image);
+    for (var image in projects.projects[index].images) {
+      elem = elem + HTMLprojectImage.replace("%data%", projects.projects[index].images[image]);
     }
     $(".project-entry:last").append(elem);
   }
@@ -162,16 +170,16 @@ education.display = function() {
 
   $("#education").append(HTMLonlineClasses);
 
-  for (var index in education.onlineCourses) {
+  for (index in education.onlineCourses) {
     var course = education.onlineCourses[index];
     $("#education").append(HTMLschoolStart);
-    var elem = HTMLonlineTitle.replace("%data%", course.title);
+    elem = HTMLonlineTitle.replace("%data%", course.title);
     elem = elem + HTMLonlineSchool.replace("%data%", course.school);
     elem = elem + HTMLonlineDates.replace("%data%", course.date);
     elem = elem + HTMLonlineURL.replace("%data%", course.url);
     $(".education-entry:last").append(elem);
   }
-}
+};
 
 bio.display();
 work.display();
@@ -221,4 +229,4 @@ markerContent = {
     'master\'s, doctoral, and professional degrees in the social and behavioral sciences, ' +
     'the liberal arts, business, education, engineering, and health-related fields such ' +
     'as medicine, dentistry, optometry, nursing, and public health.'
-}
+};
